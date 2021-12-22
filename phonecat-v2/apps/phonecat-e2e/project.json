@@ -1,0 +1,28 @@
+{
+  "root": "apps/phonecat-e2e",
+  "sourceRoot": "apps/phonecat-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/phonecat-e2e/cypress.json",
+        "devServerTarget": "phonecat:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "phonecat:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/phonecat-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["phonecat"]
+}

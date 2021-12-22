@@ -1,0 +1,13 @@
+<header class="main-header">
+  <a routerLink="/">Phonecat</a>
+  <input type="search" class="search" [formControl]="searchControl" placeholder="Search..." />
+  <nav>
+    <a routerLink="/phone-list-v2">Phone List</a>
+  </nav>
+</header>
+<main>
+  <div class="iframe-wrapper" [hidden]="collapseIframe">
+    <iframe hbHybrid [src]="iframeSrc" [isIframeCollapsed]="collapseIframe"></iframe>
+  </div>
+  <router-outlet></router-outlet>
+</main>

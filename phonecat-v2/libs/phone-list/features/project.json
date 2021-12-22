@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/phone-list/features",
+  "sourceRoot": "libs/phone-list/features/src",
+  "prefix": "hb",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/phone-list/features"],
+      "options": {
+        "project": "libs/phone-list/features/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/phone-list/features/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/phone-list/features/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/phone-list/features"],
+      "options": {
+        "jestConfig": "libs/phone-list/features/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/phone-list/features/src/**/*.ts",
+          "libs/phone-list/features/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["domain:phone-list", "type:feature"]
+}

@@ -1,4 +1,10 @@
 {
   "version": 2,
-  "projects": {}
+  "projects": {
+    "hybrid": "libs/hybrid",
+    "phone-list-features": "libs/phone-list/features",
+    "phonecat": "apps/phonecat",
+    "phonecat-e2e": "apps/phonecat-e2e",
+    "shared-utils": "libs/shared/utils"
+  }
 }

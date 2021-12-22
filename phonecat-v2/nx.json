@@ -44,7 +44,6 @@
       "prefix": "hb"
     },
     "@nrwl/angular:library": {
-      "style": "scss",
       "linter": "eslint",
       "unitTestRunner": "jest",
       "strict": true,
@@ -58,5 +57,6 @@
     "@nrwl/angular:storybook-configuration": {
       "linter": "eslint"
     }
-  }
+  },
+  "defaultProject": "phonecat"
 }

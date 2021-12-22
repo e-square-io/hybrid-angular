@@ -1,7 +1,4 @@
-'use strict';
+"use strict";
 
 // Define the `phoneDetail` module
-angular.module('phoneDetail', [
-  'ngRoute',
-  'core.phone'
-]);
+angular.module("phoneDetail", ["ui.router", "core.phone"]);

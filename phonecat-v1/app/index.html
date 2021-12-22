@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Google Phone Gallery</title>
+    <base href="/">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="app.animations.css" />
@@ -11,14 +12,16 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/angular-animate/angular-animate.js"></script>
     <script src="lib/angular-resource/angular-resource.js"></script>
-    <script src="lib/angular-route/angular-route.js"></script>
+    <script src="//unpkg.com/@uirouter/angularjs@1.0.5/release/angular-ui-router.js"></script>
+    <!-- <script src="lib/angular-route/angular-route.js"></script> -->
     <script src="app.module.js"></script>
-    <script src="app.config.js"></script>
     <script src="app.animations.js"></script>
     <script src="core/core.module.js"></script>
     <script src="core/checkmark/checkmark.filter.js"></script>
     <script src="core/phone/phone.module.js"></script>
     <script src="core/phone/phone.service.js"></script>
+    <script src="core/hybrid/hybrid.module.js"></script>
+    <script src="core/hybrid/hybrid.service.js"></script>
     <script src="phone-list/phone-list.module.js"></script>
     <script src="phone-list/phone-list.component.js"></script>
     <script src="phone-detail/phone-detail.module.js"></script>
@@ -27,7 +30,8 @@
   <body>
 
     <div class="view-container">
-      <div ng-view class="view-frame"></div>
+      <ui-view></ui-view>
+      <!-- <div ng-view class="view-frame"></div> -->
     </div>
 
   </body>

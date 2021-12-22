@@ -2,6 +2,10 @@ body {
   padding: 20px;
 }
 
+a {
+  cursor: pointer;
+}
+
 h1 {
   border-bottom: 1px solid gray;
   margin-top: 0;

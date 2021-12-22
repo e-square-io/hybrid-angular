@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@phonecat-v2/hybrid": ["libs/hybrid/src/index.ts"],
+      "@phonecat-v2/phone-list/features": [
+        "libs/phone-list/features/src/index.ts"
+      ],
+      "@phonecat-v2/shared/utils": ["libs/shared/utils/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

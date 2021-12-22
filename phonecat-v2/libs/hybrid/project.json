@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/hybrid",
+  "sourceRoot": "libs/hybrid/src",
+  "prefix": "hb",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:ng-packagr-lite",
+      "outputs": ["dist/libs/hybrid"],
+      "options": {
+        "project": "libs/hybrid/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/hybrid/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/hybrid/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/hybrid"],
+      "options": {
+        "jestConfig": "libs/hybrid/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/hybrid/src/**/*.ts",
+          "libs/hybrid/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": ["type:utils"]
+}
